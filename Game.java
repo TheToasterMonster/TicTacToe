@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Game {
     enum SquareType {
         EMPTY,
@@ -102,11 +103,15 @@ public class Game {
     }
 
     static void handleWin() {
+        clearScreen();
+        printBoard();
         System.out.printf("%s won!\n", turn);
         quit = true;
     }
     
     static void handleTie() {
+        clearScreen();
+        printBoard();
         System.out.println("Tie!");
         quit = true;
     }
